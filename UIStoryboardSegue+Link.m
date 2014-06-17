@@ -23,7 +23,7 @@ static NSString* const kStaticStoryboardLinkSeperator = @"-";
 
 - (id)initWithLinkIdentifier:(NSString*)identifier source:(UIViewController*)source destination:(UIViewController*)destination {
 #ifdef DEBUG
-    SCLog(@"Segue Identifier: %@", identifier);
+    NSLog(@"Segue Identifier: %@", identifier);
 #endif
     
     if([identifier contains:kDynamicStoryboardLink]) {
@@ -41,9 +41,9 @@ static NSString* const kStaticStoryboardLinkSeperator = @"-";
                  kSceneIdentifier);
 #ifdef DEBUG
         if ([kSceneIdentifier length] == 0)
-            SCLog(@"Dynamic segue to storyboard %@", kStoryboardName);
+            NSLog(@"Dynamic segue to storyboard %@", kStoryboardName);
         else
-            SCLog(@"Dynamic segue to scene %@ in storyboard %@", kSceneIdentifier, kStoryboardName);
+            NSLog(@"Dynamic segue to scene %@ in storyboard %@", kSceneIdentifier, kStoryboardName);
 #endif
         
     } else if([identifier contains:kStaticStoryboardLink]) {
@@ -75,9 +75,9 @@ static NSString* const kStaticStoryboardLinkSeperator = @"-";
         
 #ifdef DEBUG
         if ([kSceneIdentifier length] == 0)
-            SCLog(@"Static segue to storyboard %@", kStoryboardName);
+            NSLog(@"Static segue to storyboard %@", kStoryboardName);
         else
-            SCLog(@"Static segue to scene %@ in storyboard %@", kSceneIdentifier, kStoryboardName);
+            NSLog(@"Static segue to scene %@ in storyboard %@", kSceneIdentifier, kStoryboardName);
 #endif
     }
     
@@ -112,9 +112,9 @@ static NSString* const kStaticStoryboardLinkSeperator = @"-";
                                               error:&error];
 #ifdef DEBUG
         if(!didSwizzle) {
-            SCLog(@"Failed link with %@", error);
+            NSLog(@"Failed link with %@", error);
         } else {
-            SCLog(@"Link succeeded on %@", [self class]);
+            NSLog(@"Link succeeded on %@", [self class]);
         }
 #endif
     });
