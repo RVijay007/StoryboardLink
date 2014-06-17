@@ -1,5 +1,9 @@
 Adds functionality to using storyboards where we can dynamically or statically link to other
-Storyboards using segues.
+Storyboards using segues. Basically, it allows you to link storyboards together in the storyboard itself.
+
+**Installation:**
+
+Download the code and copy the files / subdirectories within StoryboardLink to your project.
 
 **Usage:**
 
